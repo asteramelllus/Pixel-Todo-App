@@ -1,0 +1,195 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    width:100vw;
+    height:100vh;
+    background-image:url(../public/waterliliesbackground.jpg);
+    background-size:cover;
+    background-position:center;
+
+    
+}
+
+.container{
+    margin:60px 80px;
+    height:80vh;
+}
+
+
+header{
+    font-size:22px;
+    text-align:center;
+    font-family:"Press Start 2P",sans-serif;
+    color:hsl(256, 55%, 17%);
+    text-shadow: 4px 4px 2px whitesmoke;
+}
+
+header,
+form{
+    min-height:20vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* ---------- Input Box ---------- */
+
+form input{
+    padding:12px;
+    font-size:14px;
+    border:none;
+    outline:solid;
+    outline-color:white;
+    font-family:monospace;
+    font-weight:900px;
+    background-color:hsl(0, 0%, 100%);
+    border-radius:3px;
+    box-shadow:0 6px 15px hsl(270, 40%, 85%);
+
+}
+
+form button{
+    padding:12px;
+    font-size:14px;
+    border:none;
+    margin-left:10px;
+    cursor:pointer;
+    background-color:hsl(81, 32%, 69%);
+    color:hsl(270, 40%, 25%);
+    border-radius:2px;
+    transition:0.3s;
+    
+}
+
+form button:hover{
+    background-color:hsl(68, 26%, 77%);
+}
+
+/* ---------- Todo Box ---------- */
+
+.todo-container{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.todo-list{
+    min-width:50%;
+    width:80px;
+    list-style:none;
+}
+
+/* ---------- Cards ---------- */
+
+.todo{
+    margin:12px;
+    padding:12px;
+    background-color:#f5f9f3;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-radius:6px;
+    box-shadow:0 8px 20px hsl(270, 40%, 85%);
+    border-style: dashed dashed dashed solid;
+    border-color:#272b3b;
+    border-width: 4px;
+}
+
+.todo li{
+    flex:1;
+    color:hsl(270, 40%, 30%);
+    font-family:"Press Start 2P",sans-serif;
+    font-size:12px;
+}
+
+/* ---------- Buttons ---------- */
+
+.trash-btn,
+.complete-btn{
+    border:none;
+    cursor:pointer;
+    padding:10px;
+    font-size:12px;
+    border-radius:2px;
+    border-color:aliceblue;
+    border-style:dotted;
+    margin-right:5px;
+    color:hsl(270, 40%, 30%);
+    transition:0.3s;
+}
+
+.complete-btn{
+    background-color:#b7d389;
+}
+
+.trash-btn{
+    background-color:#bdbf89;
+}
+
+.complete-btn:hover{
+    background-color:#9d9e70;
+}
+
+.trash-btn:hover{
+    background-color:#97ae71;
+}
+
+/* ---------- Text ---------- */
+
+.todo-item{
+    padding:0 8px;
+}
+
+.completed{
+    text-decoration:line-through;
+    opacity:0.6;
+}
+
+/* ---------- Animation ---------- */
+
+.fall{
+    transform:translateY(8rem) rotateZ(15deg);
+    opacity:0;
+}
+
+/* ---------- Dropdown ---------- */
+
+select{
+    appearance:none;
+    border:none;
+    outline:none;
+    width:20rem;
+    padding:12px;
+    cursor:pointer;
+    font-family:"Press Start 2P",sans-serif;
+    color:hsl(270, 40%, 30%);
+    background-color:hsl(0, 0%, 100%);
+    border-radius:6px;
+    box-shadow:0 6px 15px hsl(270, 40%, 85%);
+}
+
+.select{
+    margin:1rem;
+    position:relative;
+    overflow:hidden;
+}
+
+.select::after{
+    content:"▼";
+    position:absolute;
+    right:0;
+    top:0;
+    padding:12px;
+    background-color:hsl(81, 32%, 69%);
+    color:hsl(270, 40%, 30%);
+    pointer-events:none;
+    transition:0.3s;
+}
+
+.select:hover::after{
+    background-color:hsl(68, 26%, 77%);
+}
